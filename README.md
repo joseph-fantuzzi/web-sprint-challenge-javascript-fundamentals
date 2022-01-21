@@ -26,6 +26,12 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Explain the differences between `.map`, `.reduce` and `.filter` and describe a use case for each. 
 
+    The .map() method creates a new array and takes a callback function as an argument. The .map() method is good to use when needing to manipulate an array data set. One use case would be if we had an array of numbers and we needed to perform a task on all of the numbers in the array. For example, let's say we wanted to multiply each number in the array by 10. The .map() method would allow us to get the job done.
+
+    The .reduce() method gives back a single value. This method takes in two arguments. A callback function is the first argument, which has two parameters: the accumulator and the current value. The second argument for the .reduce() method is the initial value. A good use case for this method would be if we had an array of numbers and we wanted the sum of all of those numbers. The .reduce() method would be able to get the job done. 
+
+    The .filter() method creates a new array with elements that satisfy a given condition. This method takes a callback function as an argument. Whatever is written after the return statement is the conditional. If the items in an array satisfy that conditional statement, then those items get pushed to the new array. A good use case for this method would be if we have an array of objects. Each object is a person and has properties of age, name, and location. We can use the .filter() method to place all of the people objects that are 21 years or older into a new array. 
+
 2. Explain the difference between a callback and a higher order function.
 
 3. Explain what a closure is.
