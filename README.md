@@ -34,11 +34,24 @@ Edit this document to include your answers after each question. Make sure to lea
 
 2. Explain the difference between a callback and a higher order function.
 
+    A callback function is a function that gets passed into a higher order function as an argument. A higher order function is a function that receives a callback function as an argument.
+
 3. Explain what a closure is.
+
+    Closure is when a nested function within an outer function reaches to the outer function's scope to receive a variable or parameter. 
 
 4. Describe the four principles of the 'this' keyword.
 
+    Window Binding - 'this' will return the window object if used in global scope.
+    Implicit Binding - applies to objects with methods, when the function is invoked look to the left of the dot and that is what 'this' refers to.
+    Explicit Binding - .call(): will immediately invoke the function, we pass the this keyword and then the arguments 1 by 1
+                        .apply(): will immediately invoke the function, we pass the this keyword and then the arguments as an array
+                        .bind(): we pass in the arguments 1 by 1, it does not invoke the function, instead it returns a brand new function that can be invoked later
+    New Binding - applies to constructor functions, initialized using arguments
+
 5. Why do we need super() in an extended class?
+
+    We need super() in an extended class because it allows us to inherit the properties of its parent class. Extends tells super what to super to. Extends and super do what Object.create and Parent.call do for prototype syntax.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
