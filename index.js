@@ -17,8 +17,8 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
+//nestedFunction() can access the variable internal because of closure. This is when a nested function (nestedFunction()) 
+//within an outer function (myFunction()) accesses a variable within the scope of the outer function. We can pass information down, but never back up. 
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -28,10 +28,18 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  const array = [];
+  for (let i = 0; i < number; i++) {
+    array.push(number - i);
   }
+  const sum = array.reduce(function(acc, item) {
+    return acc + item;
+  }, 0);
+  return sum;
+}
+
+console.log('task 2', summation(4));
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,9 +64,15 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+    const displayNames = [];
+    array.forEach(function(item) {
+      displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+    });
+    return displayNames;
   }
+
+  console.log('topic 2 request 1', animalNames(zooAnimals));
   
 
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
@@ -67,9 +81,15 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const lowerCase = [];
+    array.map(function(item) {
+      lowerCase.push(item.animal_name.toLowerCase());
+    });
+    return lowerCase;
   }
+
+  console.log('topic 2 request 2', lowerCaseNames(zooAnimals));
   
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -77,7 +97,7 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
+  function lowPopulationAnimals(){
     /*Your Code Here*/
   }
   
